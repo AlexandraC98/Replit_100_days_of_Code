@@ -1,0 +1,1 @@
+In this repo I'm learning Python through the 100 Days challenge from Replit.
