@@ -1,5 +1,8 @@
 x=1
 nmb=float(input("Enter a number: "))
+if nmb<0 or nmb>1000000:
+  print ("You weren't supposed to do that")
+  exit()
 while True:
   guess=float(input("Guess the number: "))
   if x==3:
