@@ -8,10 +8,11 @@ As a young doctor who just recently graduated from Med School, I've always found
 This is my first real step towards learning a whole different set of skills than what I'm used to.
 
 ## 🐚 Description
-#### What I've learned from this course and discussions with Chat GPT:
+#### What I've learned from this course and multiple discussions with Chat GPT:
 > First 35 days:
+- variables, if/elif, nesting
 - while/for loops
 - lists/arrays
-- subroutines
+- subroutines, pretty printing using subroutines
 - a set of functions from libraries os, time, random, pyfiglet, shutil
 - easy video game developing
