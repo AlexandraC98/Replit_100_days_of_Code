@@ -3,7 +3,7 @@
 
 ---
 ## 🍀 Intro
-As a young doctor who just recently graduated from Med School, I've always found the idea of programming interesting, promising, but always too challenging for me, too different from my field of work, somewhat unreachable. Nevertheless, I've always toyed with the possibility of being able to solve everyday medical problems through programming.
+As a young doctor who just recently graduated from Med School, I've always found the idea of programming interesting, promising, though too challenging for me, too different from my field of work, somewhat unreachable. Nevertheless, I've always toyed with the possibility of being able to solve everyday medical problems through programming.
 
 This is my first real step towards learning a whole different set of skills than what I'm used to.
 
