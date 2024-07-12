@@ -56,7 +56,7 @@ lawyer.print()
 
 print()
 
-doc=doctor("Doing very nicely in the minds of ignorants","Definitely >50 per week", "Paedriatitian", "Wasted youth for BS")
+doc=doctor("Doing very nicely after some years","Definitely >50 per week", "Paedriatitian", "A lot")
 doc.print()
 
 print()
