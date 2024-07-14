@@ -1,55 +1,61 @@
-import random, time
+import random
+import time
+import hashlib
+import json
 
-Login={}
+Login = {}
 
+# Load login data from file
 try:
-  with open("Login.txt", "r") as f:
-    Login = eval(f.read())
+    with open("Login.txt", "r") as f:
+        Login = json.load(f)
 except Exception:
-  pass
+    pass
 
 def Autosave():
-  with open("Login.txt", "w") as f:
-    f.write(str(Login))
+    with open("Login.txt", "w") as f:
+        json.dump(Login, f)
+
+def hash_with_salt(text, salt):
+    return hashlib.sha256(f"{text}{salt}".encode()).hexdigest()
 
 def AddUser():
-  username=input("Username: ")
-  password=input("Password: ")
+    username = input("Username: ")
+    password = input("Password: ")
 
-  salt=random.randint(100,9999999999)
-  salt=str(salt)
+    salt = str(random.randint(100, 9999999999))
 
-  newUser=hash(f"{username} {salt}")
-  newPass=hash(f"{password} {salt}")
-  
-  Login[newUser]={"password":newPass, "salt":salt}
-  
-  Autosave()
+    newUser = hash_with_salt(username, salt)
+    newPass = hash_with_salt(password, salt)
+
+    Login[newUser] = {"password": newPass, "salt": salt}
+
+    Autosave()
 
 def LoginUser():
-  username=input("Username: ")
+    username = input("Username: ")
 
-  for user in Login:
-    salt=Login[user]["salt"]
-    newUser=hash(f"{username} {salt}")
-    
-    if newUser in Login:
-      password=input("Password: ")
-      newPass = hash(f"{password} {salt}")
-        
-      if newPass==Login[newUser]["password"]:
-        print("Login Successful")
-        return
-      else:
-        print("Login Failed")
-        return
+    for user in Login:
+        salt = Login[user]["salt"]
+        newUser = hash_with_salt(username, salt)
 
-  print("Username not found")
-  time.sleep(1)
+        if newUser in Login:
+            password = input("Password: ")
+            newPass = hash_with_salt(password, salt)
+
+            if newPass == Login[newUser]["password"]:
+                print("Login Successful")
+                return
+            else:
+                print("Login Failed")
+                return
+
+    print("Username not found")
+    time.sleep(1)
 
 while True:
-  menu=input("1: Add User\n2: Login\n> ")
-  if menu=="1":
-    AddUser()
-  elif menu=='2':
-    LoginUser()
+    menu = input("1: Add User\n2: Login\n> ")
+    if menu == "1":
+        AddUser()
+    elif menu == "2":
+        LoginUser()
