@@ -16,3 +16,17 @@ This is my first real step towards learning a whole different set of skills than
 - subroutines, pretty printing using subroutines
 - a set of functions from libraries os, time, random, pyfiglet, shutil
 - easy video game developing
+> Next 36-70 days:
+- string slicing
+- the Hangman game: https://github.com/AlexandraC98/Hangman_Game.git
+- 2D lists: https://github.com/AlexandraC98/Replit_100_days_of_Code/blob/main/45th_Day_of_Python.py
+- 2D dictionaries: https://github.com/AlexandraC98/Replit_100_days_of_Code/blob/main/47th_Day_of_Python.py
+- saving, reading files, auto-save and auto-load
+- try/except duo: https://github.com/AlexandraC98/Replit_100_days_of_Code/blob/main/53rd_Day_of_Python.py
+- csv files: https://github.com/AlexandraC98/Replit_100_days_of_Code/blob/main/56th_Day_of_Python.py
+- os, contextlib, datetime
+- recursion -> palindrome, factorial number
+- debugging
+- Replit database
+- OOP: https://github.com/AlexandraC98/Replit_100_days_of_Code/blob/main/64th_Day_of_Python.py
+- GUI with tkinter
