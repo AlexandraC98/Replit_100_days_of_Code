@@ -5,3 +5,7 @@ Day_78/.venv/bin
 Day_78/.venv/include
 Day_78/.venv/lib
 Day_78/.venv/pyvenv.cfg
+
+.env
+
+Day_86/__pycache__
